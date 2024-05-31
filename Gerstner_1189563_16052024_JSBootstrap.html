@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio individual: JavaScript y Bootstrap 📝</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        h1 {
+          @apply text-3xl font-bold underline mx-auto w-fit;
+        }
+        form {
+          @apply bg-cyan-100 w-[600px] border-2 border-black p-4 mx-auto my-4 gap-8 flex flex-col;
+        }
+        main div {
+          @apply flex flex-col;
+        }
+        label {
+          @apply font-bold;
+        }
+        button {
+          @apply bg-cyan-400 text-white w-full h-10 uppercase;
+        }
+        header {
+          @apply flex gap-8 p-4 bg-cyan-500;
+        }
+        h2 {
+          @apply font-bold text-xl cursor-pointer;
+        }
+        h3 {
+          @apply font-bold text-xl cursor-pointer text-white;
+        }
+        main {
+          @apply my-8;
+        }
+        footer {
+          @apply flex gap-8 p-4 bg-cyan-500 justify-center absolute bottom-0 w-full;
+        }
+        footer p {
+          @apply text-white mt-4;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h2>Estudio Jurídico</h2>
+
+      <h3>INICIO</h3>
+      <h3>NOSOTROS</h3>
+      <h3>CONTACTO</h3>
+    </header>
+
+    <main>
+      <h1>Formulario de Contacto</h1>
+      <form id="formConsulta">
+        <div>
+          <label for="nombre">Nombre y Apellido:</label>
+          <input class="p-1" type="text" id="nombre" name="nombre" required />
+        </div>
+        <div>
+          <label for="email">Email:</label>
+          <input class="p-1" type="email" id="email" name="email" required />
+        </div>
+        <div>
+          <label for="telefono">Teléfono:</label>
+          <input
+            class="p-1"
+            type="tel"
+            id="telefono"
+            name="telefono"
+            required
+          />
+        </div>
+        <div>
+          <label for="consulta">Consulta:</label>
+          <textarea
+            class="p-1"
+            id="consulta"
+            name="consulta"
+            rows="4"
+            required
+          ></textarea>
+        </div>
+        <button type="submit">Enviar</button>
+      </form>
+    </main>
+
+    <footer>
+      <div>
+        <h3>INICIO</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+      </div>
+      <div>
+        <h3>NOSOTROS</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+      </div>
+      <div>
+        <h3>CONTACTO</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("formConsulta").addEventListener("submit", () => {
+        alert("Formulario Enviado");
+      });
+    </script>
+  </body>
+</html>
